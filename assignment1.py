@@ -14,42 +14,42 @@ total_grade_tally: float = 0 #the final grade returned at the end
 
 #functions for calculating grades
 
-def lab_percentage(labs_done: int) -> float:
+def lab_percentage(labs_done: int) -> float: #this function calculates the grade given based off of the amount of labs done, weighted to 20%
   if labs_done <= 6 and labs_done >= 0:
     return labs_done * (20/6)
   else:
-    print("Too many or too little labs, assuming 0 labs done!")
+    print("Too many or too little labs, assuming 0 labs done!") #just in case of abnormal inputs, every single function will have a case for if a negative number or number above the maximum is input
     return 0
 
-def quiz_percentage(quizzes_done: int) -> float:
+def quiz_percentage(quizzes_done: int) -> float: #calculates the grade from amount of quizzes done, weighted to 15%
   if quizzes_done <= 6 and quizzes_done >=0:
     return quizzes_done * (15/6)
   else:
     print("Too many or too little quizzes, assuming 0 quizzes done!")
     return 0
 
-def assignment_percentage(a1: float, a2: float, a3: float, a4: float) -> float:
+def assignment_percentage(a1: float, a2: float, a3: float, a4: float) -> float: #calculates the grade from all 4 assignments done, weighted to 4% each, or 16% total
   if (a1 < 0 or a1 > 100) or (a2 < 0 or a2 > 100) or (a3 < 0 or a3 > 100) or (a4 < 0 or a4 > 100):
     print("An assignment grade is too high or too low, assuming all assignments are a 0!")
     return 0
   else:
     return (a1 * (4/100)) + (a2 * (4/100)) + (a3 * (4/100)) + (a4 * (4/100))
 
-def midterm_percentage(m1: float, m2: float) -> float:
+def midterm_percentage(m1: float, m2: float) -> float: #calculates the grade from both of the midterms, weighted to 12.5%, or 25% total
   if (m1 < 0 or m1 > 100) or (m2 < 0 or m2 > 100):
     print("A midterm grade is too high or too low, assuming all midterms are a 0!")
     return 0
   else:
     return (m1 * (12.5/100)) + (m2 * (12.5/100))
 
-def final_percentage(final: float) -> float:
+def final_percentage(final: float) -> float: #calculates the final exam weighted to 18%
   if final < 0 or final > 100:
     print("The final exam grade is too high or too low, assuming final is a 0!")
     return 0
   else:
     return final * (18/100)
 
-def midfinalprep_percentage(midfinalprep: float) -> float:
+def midfinalprep_percentage(midfinalprep: float) -> float: #calculates the midterm/final prep, weighted to 6%
   if midfinalprep < 0 or midfinalprep > 100:
     print("The midterms and final preparation grade is too high or too low, assuming that grade is a 0!")
     return 0
