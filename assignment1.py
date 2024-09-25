@@ -17,7 +17,7 @@ total_grade_tally: float = 0 #the final grade returned at the end
 def lab_percentage(labs_done: int) -> float: #this function calculates the grade given based off of the amount of labs done, weighted to 20%
   if labs_done <= 6 and labs_done >= 0:
     return labs_done * (20/6)
-  else if labs_done > 6:
+  elif labs_done > 6:
     return 20
   else:
     print("Negative labs is impossible, assuming labs done are 0!") #just in case of abnormal inputs, every single function will have a case for if a negative number or number above the maximum is input
@@ -26,6 +26,8 @@ def lab_percentage(labs_done: int) -> float: #this function calculates the grade
 def quiz_percentage(quizzes_done: int) -> float: #calculates the grade from amount of quizzes done, weighted to 15%
   if quizzes_done <= 6 and quizzes_done >=0:
     return quizzes_done * (15/6)
+  elif quizzes_done > 6:
+      return 15
   else:
     print("Negative quizzes is impossible, assuming quizzes done is 0!")
     return 0
