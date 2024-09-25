@@ -65,6 +65,10 @@ total_grade_tally += midterm_percentage(m1_grade, m2_grade)
 total_grade_tally += final_percentage(f_grade)
 total_grade_tally += midfinalprep_percentage(m_and_fp_grade)
 
+#round number to 2 decimal spots
+
+total_grade_tally_returned = round(total_grade_tally, 2)
+
 #print outcome
 
-print("Your grade is:", total_grade_tally)
+print("Your grade is:", total_grade_tally_returned)
