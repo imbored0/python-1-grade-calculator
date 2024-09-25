@@ -16,7 +16,7 @@ total_grade_tally: float = 0 #the final grade returned at the end
 
 def lab_percentage(labs_done: int) -> float:
   if labs_done <= 6 and labs_done >= 0:
-      if labs_done = 6:
+      if labs_done == 6:
           return (labs_done - 1) * (15/5)
       else:
           return labs_done * (15/5)
@@ -26,7 +26,7 @@ def lab_percentage(labs_done: int) -> float:
 
 def quiz_percentage(quizzes_done: int) -> float:
   if quizzes_done <= 6 and quizzes_done >=0:
-      if quizzes_done = 6:
+      if quizzes_done == 6:
           return (quizzes_done - 1) * (15/5)
       else:
           return quizzes_done * (15/5)
